@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Guardian Newsmap</title>
+        
+        <link href="base.css" rel="stylesheet" type="text/css" />
+        <link href="chosen.css" rel="stylesheet" type="text/css" />
+        <!--[if !IE]> -->  
+        <script src="js/js-min.js" type="text/javascript"></script>
+        <!-- <![endif]-->
+        <script type="text/javascript">
+              var _gaq = _gaq || [];
+              _gaq.push(['_setAccount', 'UA-34972503-1']);
+              _gaq.push(['_trackPageview']);
+              (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+              })();
+        </script>
+    </head>
+    <body>
+        <div class="container" id="title">
+            <h1 class="title">Guardian Newsmap<a id="infoLink"><img id="infoImg" style="display: inline;margin: 0px 10px 0px;" src="InfoIcon.png" onMouseOver="displayInfo()"/></a></h1>
+            <div id="loading"></div>
+        </div>
+        <!--[if IE]>
+		<div id="IEroot">Unfortunately, the newsmap needs a browser which supports SVG. Please try using Firefox, Chrome or Safari</div>
+		<![endif]-->
+        <!--[if !IE]> -->
+        <div class="container" id="body">
+            <div id="breadcrumb">
+                <span id="breadcrumbHome">Home</span><span id="breadcrumbGreaterThan"> &gt; </span><span id="breadcrumbSection">Stage</span>
+            </div>
+            <div class="container" id="heatmap">
+                <div id="heatmapTitle" class="subtitle">Top topics on
+                    <select class="chzn-select">
+                        <option id="1"> one day's</option>
+                        <option id="7" selected="selected"> one week's</option> 
+                        <option id="31"> one month's</option>
+                        <option id="365"> one year's</option>
+                    </select><span id="topicSpan"></span> stories</div>
+                <div id="heatmapContent"></div>
+            </div>
+            <div class="container" id="headlines">
+                <div class="subtitle" id="headlineTitle">Recent Headlines</div>
+                <div id="headlineContent"></div>
+            </div>
+            <div id="story" style="display:none">
+                <div id="storyHeadline"></div>
+                <div id="storyDate"></div>
+                <div id="storyByline"></div>
+                <div id="storyTopics"></div>
+                <div id="storySectionName"></div>
+                <div id="storyThumbnail"></div>                
+                <div id="storyWebURL"></div>
+                <div id="storyBody"></div>
+
+            </div>
+        </div>
+        
+        <script src="js/treemap.js" type="text/javascript"></script>
+        <!-- <![endif]-->
+    </body>
+</html>
